@@ -1,14 +1,28 @@
 let canvas;
 let world;
 let keyboard = new Keyboard();
+let background_sound = new Audio('audio/music.mp3');
+
+
+
+function playBGSound() {
+    background_sound.volume = 0.1;
+    if (!soundOff) {
+        background_sound.play();
+    } else if (soundOff) {
+        background_sound.pause();
+    }
+}
+
+
+
+
+
 
 
 function init() {
     canvas = document.getElementById("canvas");
     world = new World(canvas, keyboard);
-
-
-
 
 }
 
