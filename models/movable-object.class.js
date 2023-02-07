@@ -55,6 +55,10 @@ class MovableObject extends DrawableObject {
         return this.energy == 0;
     }
 
+    disappearWhenIsDead() {
+        setTimeout(() => this.x = -3000, 400);
+    }
+
     playAnimation(images) {
         let i = this.currentImage % images.length; // let i = 0 % 6; => // i = 0, 1, 2, 3, 4, 5, 0,...
         let path = images[i];

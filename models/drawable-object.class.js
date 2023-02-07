@@ -46,4 +46,56 @@ class DrawableObject {
     
         }
 
+            /**
+     * this function is used to draw rectangles around the MovableObject, it helps to check where they will collide
+     * 
+     * @param {Canvas-Context} ctx - the "ctx" parameter is a canvas context (CanvasRenderingContext2D) 
+     * that provides the environment for drawing on an HTML canvas. It allows drawing shapes, images and text on a canvas
+     */
+    drawFrame(ctx) {
+        if (this instanceof Character || this instanceof Chicken || this instanceof Endboss ||
+            this instanceof ThrowableObject || this instanceof SalsaBottle || this instanceof Coin ||
+            this instanceof SmallChicken || this instanceof Heart) {
+            ctx.beginPath();
+            ctx.lineWidth = '2';
+            ctx.strokeStyle = 'transparent';
+            ctx.rect(this.x, this.y, this.width, this.height);
+            ctx.stroke();
+        }
+    }
+
+    /**
+     * this function is used to draw the coordinates from the MovableObject that you want to know
+     * 
+     *@param {Canvas-Context} ctx - the "ctx" parameter is a canvas context (CanvasRenderingContext2D) 
+     * that provides the environment for drawing on an HTML canvas. It allows drawing shapes, images and text on a canvas
+     */
+    // drawPosition(ctx) {
+    //     if(this instanceof SalsaBottle) {
+    //         ctx.font = "48px serif";
+    //         ctx.fillText(`${this.x}, ${this.y}`, this.x, this.y);
+    //     }
+    // }
+
+
+    /**
+    * this function is used to draw rectangles around the MovableObject within the other frame, it helps to check where they will collide
+    * offset means the difference between the outer and the inner frame (this one here is the inner one)
+    * 
+    *@param {Canvas-Context} ctx - the "ctx" parameter is a canvas context (CanvasRenderingContext2D) 
+    * that provides the environment for drawing on an HTML canvas. It allows drawing shapes, images and text on a canvas
+    */
+    drawFrameOffset(ctx) {
+        if (this instanceof Character || this instanceof Chicken || this instanceof Endboss ||
+            this instanceof ThrowableObject || this instanceof SalsaBottle || this instanceof Coin ||
+            this instanceof SmallChicken || this instanceof Heart) {
+            //draw rectangle
+            ctx.beginPath();
+            ctx.lineWidth = '2';
+            ctx.strokeStyle = 'transparent';
+            ctx.rect(this.x + this.offset.left, this.y + this.offset.top, this.width - this.offset.right - this.offset.left, this.height - this.offset.top - this.offset.bottom);
+            ctx.stroke();
+        }
+    }
+
 }

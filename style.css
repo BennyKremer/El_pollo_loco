@@ -13,6 +13,7 @@ body {
     background-image: url('img/desert.png');
     background-position: center;
     font-family: 'riogrande', 'zabras', Arial, Helvetica, sans-serif;
+    background-size: cover;
 }
 
 h1 {
@@ -22,4 +23,42 @@ h1 {
 }
 canvas {
     background-color: black;
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+.control {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.control b {
+    font-size: 30px;
+}
+
+.startButton {
+    font-family: 'riogrande';
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 200px;
+    background: none;
+    cursor: pointer;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-shadow: 6px 4px 6px rgb(0 0 0 / 50%);
+    text-align: center;
+    border: none;
+    padding-left: 43%;
+}
+.startButton:hover {
+    transform: scaleY(1.2);
 }
