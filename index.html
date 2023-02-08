@@ -35,23 +35,23 @@
 
     <div class="main">
 
-        <img class="startScreen" id="startScreen" src="img/9_intro_outro_screens/start/startscreen_2.png" width="720px"
-            height="480px">
+            <img class="startScreen" id="startScreen" src="img/9_intro_outro_screens/start/startscreen_2.png" width="720"
+                height="480"></img>
+        <canvas id="canvas" class="d-none" width="720" height="480"></canvas>
+            
+            <div class="control">
+                <div class="left"><b>←</b> - move left</div>
+                <div class="right"><b>→</b> - move right</div>
+                <div class="space"><b>⎵</b> - jump</div>
+                <div class="d"><b>D</b> - trow</div>
+            </div>
 
-        <div class="control">
-            <div class="left"><b>←</b> - move left</div>
-            <div class="right"><b>→</b> - move right</div>
-            <div class="space"><b>⎵</b> - jump</div>
-            <div class="d"><b>D</b> - trow</div>
-        </div>
-        <button onclick="startGame()" class="startButton" id="startButton">Start</button>
-
-
+            <button onclick="startGame()" class="startButton" id="startButton">Start</button>
+            <button onclick="reloadGame()" class="reloadButton d-none" id="reloadButton">Restart Game</button>
     </div>
+        
 
-    <canvas id="canvas" id="d-none" width="720" height="480">
 
-    </canvas>
 
 </body>
 

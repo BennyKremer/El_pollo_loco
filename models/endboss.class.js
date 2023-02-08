@@ -81,6 +81,10 @@ class Endboss extends MovableObject {
             } else {
                 this.playAnimation(this.ENDBOSS_ALERT);
             }
+
+            if(world.character.x > 3300) {
+                i = 0;
+            }
         }, 200);
     }
 
