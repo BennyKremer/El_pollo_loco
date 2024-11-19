@@ -66,7 +66,7 @@ class Endboss extends MovableObject {
         this.animate();
     }
 
-    animate() {
+    animate(i) {
         setInterval(() => {
             if (this.isDead()) {
                 this.endTheGame();

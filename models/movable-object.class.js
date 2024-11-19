@@ -40,6 +40,7 @@ class MovableObject extends DrawableObject {
         this.energy -= 5;
         if(this.energy < 0) {
             this.energy = 0;
+            game_over.play();
         } else {
             this.lastHit = new Date().getTime();
         }
@@ -77,5 +78,5 @@ class MovableObject extends DrawableObject {
     jump() {
         this.speedY = 30;
     }
-
+    
 }

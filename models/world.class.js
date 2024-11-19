@@ -9,6 +9,7 @@ class World {
   bottleBar = new BottleBar();
   coinBar = new CoinBar();
   throwableObjects = [];
+  
 
   constructor(canvas, keyboard) {
     this.ctx = canvas.getContext("2d");
@@ -44,8 +45,10 @@ class World {
       if(this.character.isColliding(enemy) ) {
           this.character.hit();
           this.statusBar.setPercentage(this.character.energy);
+          hurt.play();
       }
   });
+  
   }
 
   draw() {
@@ -60,7 +63,7 @@ class World {
     this.addToMap(this.bottleBar);
     this.addToMap(this.coinBar);
     this.ctx.translate(this.camera_x, 0); 
-
+    
     this.addToMap(this.character);
     this.addObjectsToMap(this.level.clouds);
     this.addObjectsToMap(this.level.enemies);

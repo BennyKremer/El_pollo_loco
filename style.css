@@ -9,7 +9,7 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
+    margin: 10;
     background-image: url('img/desert.png');
     background-position: center;
     font-family: 'riogrande', 'zabras', Arial, Helvetica, sans-serif;
@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 55px;
     letter-spacing: 3px;
     text-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -58,6 +58,7 @@ canvas {
     text-align: center;
     border: none;
     padding-left: 40%;
+    color: red;
 }
 .startButton:hover {
     transform: scaleY(1.2);

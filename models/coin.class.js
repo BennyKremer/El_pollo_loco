@@ -1,4 +1,8 @@
 class Coin extends MovableObject {
+
+    height = 60;
+    width = 60;
+
     COIN_IMAGES = [
         'img/8_coin/coin_1.png',
         'img/8_coin/coin_2.png',
